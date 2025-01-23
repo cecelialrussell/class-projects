@@ -1,0 +1,21 @@
+function calculateTotalCost () {
+    let totalCost = 0;
+    let priceInput = prompt("Enter price (or 'done' to finish):");
+
+    while (priceInput !== "done") {
+        let price = parseFloat(priceInput);
+
+        if (!isNaN(price) && price >= 0) {
+            totalCost += price;
+        } else {
+            alert("Invalid price. Please enter a positive number or 'done'.");
+        }
+
+        priceInput = prompt("Enter the price (or 'done' to finish):");
+        
+    }
+
+    alert("Total cost:" + totalCost.toFixed(2));
+}
+
+calculateTotalCost();
